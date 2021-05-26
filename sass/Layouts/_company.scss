@@ -1,0 +1,68 @@
+.company {
+    padding-bottom: $pd-2 + 2;
+    background-color: $color-white-cream;
+    h5 {
+        padding-top: 16px;
+        @include styleText($color-gray-4, $fs-1, $fw-normal);
+        text-align: center;
+    }
+    .company__partners {
+        display: flex;
+        justify-content: center;
+        padding-bottom: $pd-2;
+        .company__logos {
+            padding-top: 32px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .company__item {
+                margin: 0 32px 18px;
+            }
+
+        }
+    }
+    .company__content {
+        .company__udeItem {
+            text-align: center;
+            padding: 28px 30px;
+            .company__text {
+                width: 55%;
+                margin: auto;
+                a {
+                    @include styleText($color-black-0, $fs-2 - 1, $fw-bold-1);
+                }
+                p {
+                    padding-top: 3px;
+                    @include styleText($color-black-0, $fs-0 + 1, $fw-normal);
+                }
+            }
+            
+        }
+        .company__udeItem:first-child {
+            border-right: 1px solid $color-gray-6;
+        }
+    }
+}
+@include responsive('large') {
+    .company {
+        .company__content {
+            .company__udeItem {
+                .company__text {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@include responsive('medium'){
+    .company {
+        .company__partners {
+            .company__logos {
+                width: 300px;
+                .company__item {
+                    margin: 8px 16px;
+                }
+            }
+        }
+    }
+}

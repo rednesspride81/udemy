@@ -1,0 +1,95 @@
+// >768px
+footer {
+    .footer__content {
+        margin: 40px auto;
+        width: 92%;
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 110px;
+            li {
+                list-style: none;
+                padding: 2px;
+                a {
+                    @include styleText($color-blue, $fs-1, $fw-normal);
+                }
+                &:hover {
+                    a {
+                        color: $color-gray-4;
+                    }
+                }
+                .footer__bold {
+                    font-weight: $fw-bold-1;
+                }
+            }
+        }
+        .footer_language {
+            text-align: right;
+            .dropup .dropdown-toggle::after {
+                border: none;
+            }
+            .btn {
+                min-width: 160px;
+                border: 1px solid $color-black-0;
+                border-radius: 1px;
+                display: flex;
+                justify-content: space-between;
+                .btn_left {
+                    @include styleText($color-gray-4, $fs-1, $fw-bold);
+                    i {
+                        padding: 0 10px;
+                    }
+                }
+                .btn__right {
+                    margin-left: auto;
+                    @include styleText($color-gray-4, $fs-1, $fw-normal);
+                }
+            }
+            .dropdown-menu {
+                min-width: 160px;
+            }
+        }
+    }
+    .footer__copyright {
+        width: 92%;
+        margin: 30px auto;
+        img {
+            width: 110px;
+        }
+        a {
+            padding: 0 $pd-1;
+            @include styleText($color-blue, $fs-1, $fw-normal);
+            &:hover {
+                color: $color-gray-4;
+            }
+        }
+        span {
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+            text-align: right;
+        }
+    }
+    .footer_bottom {
+        border-top: 6px solid #ec5252;
+        margin: 0;
+    }
+}
+
+// < 768px
+@include responsive("medium") {
+    footer {
+        margin-left: 15px;
+        .footer__smlinks {
+            li {
+                display: inline-flex;
+                padding: 6px;
+                a {
+                    @include styleText($color-blue, $fs-1, $fw-normal);
+                }
+            }
+        }
+        .footer__copyright {
+            margin: 5px 0;
+        }
+    }
+}

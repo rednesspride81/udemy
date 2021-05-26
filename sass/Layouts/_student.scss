@@ -1,0 +1,102 @@
+.student {
+    margin-top: $mg-2;
+    h3 {
+        width: 95%;
+        margin-left: auto;
+        margin-bottom: $mg-1;
+        @include styleText($color-gray-4, $fs-2 - 1, $fw-normal);
+    }
+    .student__content {
+        width: 90%;
+        margin: auto;
+        position: relative;
+        .owl-next {
+            top: 40%;
+            right: -2%;
+        }
+        .owl-prev {
+            top: 40%;
+            left: -2%;
+        }
+        .card {
+            border-radius: 0;
+            box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+        }
+        .card-title {
+            @include styleText($color-black-0, $fs-0, $fw-bold-1);
+            margin-bottom: $mg-1;
+        }
+        .card-text {
+            @include styleText($color-gray-4, $fs-1 - 1, $fw-normal);
+            margin-bottom: $mg-1 + 4;
+        }
+        .student__rating {
+            display: flex;
+            .student__star {
+                margin-right: $mg-1 - 5;
+                @include styleText($color-yellow, $fs-1, $fw-normal);
+            }
+            span:nth-child(2) {
+                margin-right: $mg-1 - 5;
+                @include styleText($color-black-0, $fs-1, $fw-bold-1);
+            }
+            span:last-child {
+                @include styleText($color-gray-4, $fs-1 - 1, $fw-normal);
+            }
+        }
+        .student__price {
+            text-align: right;
+            .old-price {
+                @include styleText($color-gray-4, $fs-1, $fw-normal);
+                text-decoration: line-through;
+                margin-right: $mg-1;
+            }
+            .new-price {
+                @include styleText($color-black-0, $fs-2 - 2, $fw-bold-1);
+            }
+        }
+    }
+}
+
+.student {
+    @include responsive("extra-large") {
+        .student__content {
+            .owl-next {
+                right: -3%;
+            }
+            .owl-prev {
+                left: -3%;
+            }
+        }
+    }
+    @include responsive("large") {
+        .student__content {
+            .owl-next {
+                right: -4%;
+            }
+            .owl-prev {
+                left: -4%;
+            }
+        }
+    }
+    @include responsive("medium") {
+        .student__content {
+            .owl-next {
+                right: -5%;
+            }
+            .owl-prev {
+                left: -5%;
+            }
+        }
+    }
+    @include responsive("small") {
+        .student__content {
+            .owl-next {
+                right: -6%;
+            }
+            .owl-prev {
+                left: -6%;
+            }
+        }
+    }
+}

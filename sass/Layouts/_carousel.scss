@@ -1,0 +1,53 @@
+.udeCarousel {
+    background-image: url(../img/cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    .udeCarousel__content {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        padding-right: 20px;
+        max-width: 495px;
+        h1 {
+            @include styleText($color-white-0, $fs-4, $fw-bold-1);
+            margin: 0 0 20px;
+        }
+        p {
+            @include styleText($color-white-0, $fs-0 + 3, $fw-normal);
+            margin: 0 0 20px;
+        }
+        .input-group {
+            .form-control {
+                padding: $fs-3;
+                border: none;
+                &::placeholder {
+                    font-size: $fs-2;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            .input-group-append {
+                .input-group-text {
+                    background-color: $color-white-0;
+                    color: $color-red-0;
+                    font-size: $fs-2;
+                    padding: $pd-1 + 1 $pd-1 + 4;
+                    cursor: pointer;
+                    background-image: none;
+                    border: 1px solid transparent;
+                    white-space: nowrap;
+                }
+                &:hover {
+                    .input-group-text {
+                        background-color: $color-red-0;
+                        color: $color-white-0;
+                    }
+                }
+            }
+        }
+    }
+}

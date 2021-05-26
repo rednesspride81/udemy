@@ -1,0 +1,51 @@
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.owl-prev {
+    position: absolute;
+    top: 30%;
+    left: -3%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%!important;
+    line-height: 40px!important;
+    text-align: center;
+    background-color: $color-white-0!important;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    z-index: 3;
+    transition: all 0.3s;
+    &:hover {
+        box-shadow: rgba(20, 23, 28, 0.15) 0px 2px 8px 2px;
+    color: rgb(0, 87, 107);
+    }
+    span {
+        @include styleText($color-blue, $fs-4 + 5, $fw-normal);
+    }
+}
+.owl-next {
+    position: absolute;
+    top: 30%;
+    right: -3%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%!important;
+    line-height: 40px!important;
+    text-align: center;
+    background-color: $color-white-0!important;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    z-index: 3;
+    transition: all 0.3s;
+    &:hover {
+        box-shadow: rgba(20, 23, 28, 0.15) 0px 2px 8px 2px;
+    color: rgb(0, 87, 107);
+    }
+    span {
+        @include styleText($color-blue, $fs-4 + 5, $fw-normal);
+    }
+}
+
+.owl-theme .owl-nav .disabled {
+    opacity: 0;
+    cursor: default;
+}
